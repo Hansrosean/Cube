@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    tools:context=".fragments.AddTransactionFragment">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_back_to_transaction_fragment"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="15dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:tint="?attr/colorOnSecondary"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nexa_bold"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="@string/add_transaction_title"
+        android:textColor="?attr/colorSecondaryVariant"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:layout_marginHorizontal="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/labelTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:theme="@style/TextInputLayout.CursorColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"
+            android:hint="@string/label"
+            android:textColorHint="?attr/colorOnSecondary"
+            app:boxBackgroundColor="?attr/colorOnTertiary"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="?attr/colorOnSecondary"
+            app:errorEnabled="true"
+            app:hintTextColor="?attr/colorOnSecondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/labelEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_label_24"
+                android:drawablePadding="12dp"
+                android:drawableTint="?attr/colorOnSecondary"
+                android:inputType="text|textCapSentences"
+                android:maxLines="1"
+                android:textCursorDrawable="@color/black"
+                android:textColor="?attr/colorOnSecondary"
+                android:fontFamily="@font/nexa_light"
+                android:textStyle="bold"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/amountTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:theme="@style/TextInputLayout.CursorColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/amount"
+            android:textColorHint="?attr/colorOnSecondary"
+            app:boxBackgroundColor="?attr/colorOnTertiary"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="?attr/colorOnSecondary"
+            app:errorEnabled="true"
+            app:hintTextColor="?attr/colorOnSecondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/amountEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_attach_money_24"
+                android:drawablePadding="12dp"
+                android:drawableTint="?attr/colorOnSecondary"
+                android:inputType="numberSigned"
+                android:maxLines="1"
+                android:textCursorDrawable="@color/black"
+                android:textColor="?attr/colorOnSecondary"
+                android:fontFamily="@font/nexa_light"
+                android:imeOptions="actionNext"
+                android:textStyle="bold"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/descriptionInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:theme="@style/TextInputLayout.CursorColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/description"
+            android:textColorHint="?attr/colorOnSecondary"
+            app:boxBackgroundColor="?attr/colorOnTertiary"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="?attr/colorOnSecondary"
+            app:errorEnabled="true"
+            app:hintTextColor="?attr/colorOnSecondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/descriptionEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_description_24"
+                android:drawablePadding="12dp"
+                android:drawableTint="?attr/colorOnSecondary"
+                android:inputType="textMultiLine|textCapSentences"
+                android:elegantTextHeight="true"
+                android:importantForAutofill="no"
+                android:textCursorDrawable="@color/black"
+                android:textColor="?attr/colorOnSecondary"
+                android:fontFamily="@font/nexa_light"
+                android:textStyle="bold"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_transaction"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/blue"
+            android:text="@string/add_transaction"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/nexa_light"
+            android:textStyle="bold"
+            app:cornerRadius="13dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

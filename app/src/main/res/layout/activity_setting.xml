@@ -1,0 +1,63 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SettingActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_dark_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="?attr/colorPrimary"
+        app:strokeWidth="0dp">
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_theme"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/nexa_light"
+            android:paddingHorizontal="20dp"
+            android:text="@string/dark_mode"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_language_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:layout_constraintEnd_toEndOf="@id/cv_dark_mode"
+        app:layout_constraintStart_toStartOf="@id/cv_dark_mode"
+        app:layout_constraintTop_toBottomOf="@id/cv_dark_mode"
+        app:rippleColor="?attr/colorSecondaryVariant"
+        app:strokeColor="?attr/colorPrimary">
+
+        <TextView
+            android:id="@+id/tv_language_setting"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/nexa_light"
+            android:gravity="fill"
+            android:paddingHorizontal="20dp"
+            android:text="@string/language"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

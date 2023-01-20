@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cube</string>
+    <string name="settings">Pengaturan</string>
+    <string name="finance">Finansial</string>
+    <string name="balance">Saldo saat ini</string>
+    <string name="budget">Anggaran</string>
+    <string name="_100000">Rp 100000</string>
+    <string name="expense">Pengeluaran</string>
+    <string name="income">Pendapatan</string>
+    <string name="transaction">Transaksi</string>
+    <string name="amount_digit_plus">+ Rp %.0f</string>
+    <string name="amount_digit_minus">- Rp %.0f</string>
+    <string name="amount_digit">Rp %.0f</string>
+    <string name="label">Label</string>
+    <string name="amount">Jumlah</string>
+    <string name="description">Deskripsi</string>
+    <string name="add_transaction">Tambahkan Transaksi</string>
+    <string name="add_transaction_title">Tambah Transaksi</string>
+    <string name="update_transaction">Perbarui Transaksi</string>
+    <string name="transaction_added">Transaksi ditambahkan</string>
+    <string name="transaction_changed">Transaksi diubah</string>
+    <string name="deleted">TRANSAKSI DIHAPUS</string>
+    <string name="dark_mode">Mode gelap</string>
+    <string name="language">Bahasa</string>
+    <string name="onboarding_description">Kami membantu mengalokasikan keuangan Anda dengan bijak melalui aplikasi kami</string>
+    <string name="financial_helper">PEMBANTU KEUANGAN</string>
+    <string name="next">Selanjutnya</string>
+    <string name="hint_name_onboarding">Masukkan nama Anda</string>
+    <string name="tv_title_display_name">Kami akan menampilkan nama Anda pada halaman utama</string>
+    <string name="finish">Selesai</string>
+    <string name="required">Harus diisi</string>
+    <string name="welcome">Selamat datang!</string>
+    <string name="exit">Keluar</string>
+    <string name="are_you_sure_exit">Apakah Anda yakin ingin keluar?</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
+    <string name="greeting">Hai, %1$s</string>
+    <string name="undo">BATALKAN</string>
+    <string name="delete_transaction_dialog">Hapus Transaksi</string>
+    <string name="delete_transaction_message_dialog">Apakah Anda yakin menghapus transaksi ini?</string>
+    <string name="setting">Pengaturan</string>
+</resources>

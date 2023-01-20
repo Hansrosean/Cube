@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/transaction_detail_constraint_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    tools:context=".fragments.DetailTransactionFragment">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_back_to_transaction_fragment"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="15dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:tint="?attr/colorOnSecondary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_delete_transaction"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="15dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_baseline_delete_24"
+        android:tint="?attr/colorOnSecondary"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/labelTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:theme="@style/TextInputLayout.CursorColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:hint="@string/label"
+            android:textColorHint="?attr/colorSecondaryVariant"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeWidth="0dp"
+            app:errorEnabled="true"
+            app:hintTextColor="?attr/colorSecondaryVariant">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/labelEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="12dp"
+                android:inputType="text|textCapSentences"
+                android:maxLines="1"
+                android:textColor="?attr/colorSecondaryVariant"
+                android:textCursorDrawable="?attr/colorSecondaryVariant"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/nexa_light"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/amountTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:theme="@style/TextInputLayout.CursorColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/amount"
+            android:textColorHint="?attr/colorSecondaryVariant"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeWidth="0dp"
+            app:errorEnabled="true"
+            app:hintTextColor="?attr/colorSecondaryVariant">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/amountEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="12dp"
+                android:inputType="numberSigned"
+                android:maxLines="1"
+                android:textColor="?attr/colorSecondaryVariant"
+                android:textCursorDrawable="?attr/colorSecondaryVariant"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/nexa_light"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/descriptionInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:theme="@style/TextInputLayout.CursorColor"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/description"
+            android:textColorHint="?attr/colorSecondaryVariant"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeWidth="0dp"
+            app:errorEnabled="true"
+            app:hintTextColor="?attr/colorSecondaryVariant">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/descriptionEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="12dp"
+                android:inputType="text|textCapSentences|textMultiLine"
+                android:elegantTextHeight="true"
+                android:maxLines="5"
+                android:textColor="?attr/colorSecondaryVariant"
+                android:textCursorDrawable="?attr/colorSecondaryVariant"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/nexa_light"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_update_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="@color/blue"
+        android:text="@string/update_transaction"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/nexa_light"
+        android:visibility="gone"
+        app:cornerRadius="13dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>
