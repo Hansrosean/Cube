@@ -11,7 +11,6 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.mad.cube.R
 import com.mad.cube.ViewModelFactory
 import com.mad.cube.databinding.ActivityMainBinding
@@ -82,7 +81,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
+// onBackPressed moved to TransactionFragment
+    /*
+        override fun onBackPressed() {
         MaterialAlertDialogBuilder(this@MainActivity, R.style.AlertDialogTheme)
             .setTitle(getString(R.string.exit))
             .setMessage(getString(R.string.are_you_sure_exit))
@@ -91,5 +92,6 @@ class MainActivity : AppCompatActivity() {
             }
             .setNegativeButton(getString(R.string.no), null)
             .show()
-    }
+        }
+    */
 }
