@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.mad.cube.R
 import com.mad.cube.adapter.TransactionAdapter
@@ -69,6 +71,23 @@ class TransactionFragment : Fragment(), TransactionClickHandler {
         fabAddTransaction()
         fetchAllTransactions()
         deleteTransaction()
+
+        // onBackPressed action
+        requireActivity().onBackPressedDispatcher.addCallback(
+            viewLifecycleOwner,
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    MaterialAlertDialogBuilder(requireContext(), R.style.AlertDialogTheme)
+                        .setTitle(getString(R.string.exit))
+                        .setMessage(getString(R.string.are_you_sure_exit))
+                        .setPositiveButton(getString(R.string.yes)) { _, _ ->
+                            requireActivity().finish()
+                        }
+                        .setNegativeButton(getString(R.string.no), null)
+                        .show()
+                }
+            }
+        )
     }
 
     private fun updateDashboard() {
@@ -135,8 +154,10 @@ class TransactionFragment : Fragment(), TransactionClickHandler {
                 }
                 snackBar.setActionTextColor(ContextCompat.getColor(requireContext(), R.color.blue))
                 snackBar.show()
-                val snackBarCustom = snackBar.view.findViewById<TextView>(com.google.android.material.R.id.snackbar_text)
-                snackBarCustom.typeface = ResourcesCompat.getFont(requireContext(), R.font.roboto_regular)
+                val snackBarCustom =
+                    snackBar.view.findViewById<TextView>(com.google.android.material.R.id.snackbar_text)
+                snackBarCustom.typeface =
+                    ResourcesCompat.getFont(requireContext(), R.font.roboto_regular)
             }
         }
     }
